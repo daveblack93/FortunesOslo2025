@@ -1,0 +1,6 @@
+@Fortunes_HostAddress = http://localhost:5089
+
+GET {{Fortunes_HostAddress}}/fortune/
+Accept: application/json
+
+###
