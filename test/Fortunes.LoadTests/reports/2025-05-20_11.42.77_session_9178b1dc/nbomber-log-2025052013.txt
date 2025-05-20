@@ -1,0 +1,19 @@
+2025-05-20 13:42:19.818 +02:00 [INF] [ThreadId:1] NBomber 5.8.2 started a new session: 2025-05-20_11.42.77_session_9178b1dc
+2025-05-20 13:42:19.842 +02:00 [INF] [ThreadId:1] NBomber started as single node
+2025-05-20 13:42:19.843 +02:00 [INF] [ThreadId:1] License validation....
+2025-05-20 13:42:19.843 +02:00 [WRN] [ThreadId:1] THIS VERSION IS FREE ONLY FOR PERSONAL USE. You can't use it for an organization.
+2025-05-20 13:42:19.853 +02:00 [INF] [ThreadId:1] Reports folder: /Users/davidepiatti/FortunesOslo2025/test/Fortunes.LoadTests/bin/Release/net9.0/reports/2025-05-20_11.42.77_session_9178b1dc
+2025-05-20 13:42:19.853 +02:00 [INF] [ThreadId:1] Plugins: no plugins were loaded
+2025-05-20 13:42:19.853 +02:00 [INF] [ThreadId:1] Reporting sinks: no reporting sinks were loaded
+2025-05-20 13:42:19.853 +02:00 [INF] [ThreadId:1] Starting init...
+2025-05-20 13:42:19.857 +02:00 [INF] [ThreadId:1] Target scenarios: Get Fortune
+2025-05-20 13:42:19.858 +02:00 [INF] [ThreadId:1] Init finished
+2025-05-20 13:42:19.865 +02:00 [INF] [ThreadId:1] Starting warm up...
+2025-05-20 13:42:19.866 +02:00 [INF] [ThreadId:1] Warm up for scenarios: Get Fortune
+2025-05-20 13:42:19.867 +02:00 [INF] [ThreadId:1] Warm up duration: 00:00:30
+2025-05-20 13:42:50.881 +02:00 [INF] [ThreadId:8] Starting bombing...
+2025-05-20 13:43:28.355 +02:00 [INF] [ThreadId:18] Waiting on scenarios completion...
+2025-05-20 13:43:29.352 +02:00 [WRN] [ThreadId:6] Stopping test early: stop command activated by CLI
+2025-05-20 13:43:32.360 +02:00 [INF] [ThreadId:6] Calculating final statistics...
+2025-05-20 13:43:32.642 +02:00 [INF] [ThreadId:6] Reports saved in folder: /Users/davidepiatti/FortunesOslo2025/test/Fortunes.LoadTests/reports/2025-05-20_11.42.77_session_9178b1dc
+2025-05-20 13:43:32.642 +02:00 [WRN] [ThreadId:6] THIS VERSION IS FREE ONLY FOR PERSONAL USE. You can't use it for an organization.
