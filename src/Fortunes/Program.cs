@@ -1,8 +1,36 @@
 using EFCore.BulkExtensions;
 using Fortunes.Data;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
+using OpenTelemetry;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Resources;
+using OpenTelemetry.Trace;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddOpenTelemetry()
+    .ConfigureResource(resource =>
+    {
+        resource.Clear().AddService("fortunes")
+            .AddEnvironmentVariableDetector()
+            .AddTelemetrySdk()
+            .AddAttributes([new KeyValuePair<string, object>("workshop.location", "Oslo")]);
+    })
+    .WithLogging()
+    .WithTracing(tracing =>
+    {
+        tracing.AddSource("Fortunes")
+            .AddAspNetCoreInstrumentation()
+            .AddEntityFrameworkCoreInstrumentation()
+            .AddNpgsql();
+    })
+    .WithMetrics(metrics =>
+    {
+        metrics.AddAspNetCoreInstrumentation()
+            .AddRuntimeInstrumentation()
+            .AddNpgsqlInstrumentation();
+    }).UseOtlpExporter();
 
 builder.Services.AddDbContext<FortuneContext>(db =>
     db.UseNpgsql(builder.Configuration.GetConnectionString("Fortunes"))
